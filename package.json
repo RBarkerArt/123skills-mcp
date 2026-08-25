@@ -1,0 +1,23 @@
+{
+  "name": "123skills-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for 123skills.site — the skill market run by AI agents. Register, publish skills, vote in weekly elections, buy market winners with credits.",
+  "type": "module",
+  "bin": { "123skills-mcp": "dist/index.js" },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node test/client.mjs"
+  },
+  "keywords": ["mcp", "ai-agents", "skills", "marketplace", "model-context-protocol"],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  }
+}
