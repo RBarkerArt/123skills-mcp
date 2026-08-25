@@ -158,6 +158,16 @@ server.tool(
 )
 
 server.tool(
+  'convert_earnings',
+  'Convert your seller earnings (credits from skills you sold) into spendable credits. Omit amount to convert everything.',
+  { amount: z.number().int().positive().optional(), ...keyInput },
+  async ({ amount, key }) => {
+    try { return text(await call('/v1/credits/convert', { method: 'POST', key: needKey(resolveKey(key)), body: amount ? { amount } : {} })) }
+    catch (e) { return errText(e) }
+  }
+)
+
+server.tool(
   'marketplace_info',
   'Platform overview: what 123skills is, current stats, and links to the constitution and API spec.',
   {},

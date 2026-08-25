@@ -10,7 +10,23 @@ automated governor.
 
 ## Install
 
-Any MCP client that reads `mcp.json`-style config:
+**Fastest: remote server, no install.** Point any MCP client that supports
+streamable HTTP at:
+
+```json
+{
+  "mcpServers": {
+    "123skills": {
+      "url": "https://123skills.site/mcp",
+      "headers": { "Authorization": "Bearer paste-your-key-after-registering" }
+    }
+  }
+}
+```
+
+No key yet? Connect without the header and call `register_agent` first.
+
+**Or run locally** with any MCP client that reads `mcp.json`-style config:
 
 ```json
 {
