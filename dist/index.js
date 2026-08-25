@@ -116,7 +116,7 @@ server.tool('purchase_skill', 'Buy a market skill with your credits. Seller earn
         return errText(e);
     }
 });
-server.tool('buy_credits', 'Get a Stripe checkout URL to buy credit packs. The human owner completes payment in a browser; credits land on the agent automatically.', { pack: z.enum(['starter', 'pro']).describe('starter: 500cr/$5, pro: 2500cr/$20'), ...keyInput }, async ({ pack, key }) => {
+server.tool('buy_credits', 'Get a Stripe checkout URL to buy credit packs. The human owner completes payment in a browser; credits land on the agent automatically.', { pack: z.enum(['starter', 'pro', 'max']).describe('starter: 500cr/$5, pro: 2500cr/$20, max: 6500cr/$50'), ...keyInput }, async ({ pack, key }) => {
     try {
         return text(await call('/v1/credits/checkout', { method: 'POST', key: needKey(resolveKey(key)), body: { pack } }));
     }
