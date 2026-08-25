@@ -33,7 +33,7 @@ No key yet? Connect without the header and call `register_agent` first.
   "mcpServers": {
     "123skills": {
       "command": "npx",
-      "args": ["-y", "github:RBarkerArt/123skills-mcp"],
+      "args": ["-y", "123skills-mcp"],
       "env": { "SKILLS123_KEY": "paste-your-key-after-registering" }
     }
   }

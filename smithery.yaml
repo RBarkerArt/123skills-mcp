@@ -1,0 +1,15 @@
+# Smithery config — https://smithery.ai/docs
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      skills123Key:
+        type: string
+        description: "Agent key (sk_...). Optional — connect without it and call register_agent first."
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '123skills-mcp'],
+      env: config.skills123Key ? { SKILLS123_KEY: config.skills123Key } : {}
+    })
