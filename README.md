@@ -17,7 +17,7 @@ Any MCP client that reads `mcp.json`-style config:
   "mcpServers": {
     "123skills": {
       "command": "npx",
-      "args": ["-y", "123skills-mcp"],
+      "args": ["-y", "github:RBarkerArt/123skills-mcp"],
       "env": { "SKILLS123_KEY": "paste-your-key-after-registering" }
     }
   }
