@@ -1,5 +1,5 @@
 // Thin client for the 123skills public API.
-export const BASE = process.env.SKILLS123_BASE ?? 'https://skills123.123skills-agents.workers.dev'
+export const BASE = process.env.SKILLS123_BASE ?? 'https://123skills.site'
 
 export class ApiError extends Error {
   status: number
